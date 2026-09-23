@@ -1,1 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Data With Sri | Technology Training</title>
+
+    <meta name="description"
+          content="Data With Sri provides affordable, customizable online training in Data Structures, Problem Solving, SQL, Data Analytics, Data Science and Artificial Intelligence.">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #172033;
+            background: #ffffff;
+        }
+
+        /* NAVBAR */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.96);
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .navbar {
+            max-width: 1150px;
+            margin: auto;
+            padding: 18px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: 800;
+            color: #4f46e5;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: #111827;
+        }
+
+        nav a {
+            margin-left: 24px;
+            text-decoration: none;
+            color: #374151;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #4f46e5;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 88vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #eef2ff, #ffffff 55%, #f0fdf4);
+        }
+
+        .hero-content {
+            max-width: 1150px;
+            margin: auto;
+            padding: 80px 25px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 8px 15px;
+            border-radius: 30px;
+            background: #e0e7ff;
+            color: #4338ca;
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 72px);
+            line-height: 1.05;
+            max-width: 800px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #4f46e5;
+        }
+
+        .hero p {
+            max-width: 700px;
+            font-size: 20px;
+            color: #4b5563;
+            margin-bottom: 35px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 24px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.2s;
+        }
+
+        .primary {
+            background: #4f46e5;
+            color: white;
+        }
+
+        .primary:hover {
+            background: #3730a3;
+            transform: translateY(-2px);
+        }
+
+        .secondary {
+            border: 2px solid #4f46e5;
+            color: #4f46e5;
+            background: white;
+        }
+
+        .secondary:hover {
+            background: #eef2ff;
+        }
+
+        /* GENERAL */
+
+        section {
+            padding: 85px 25px;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .section-title p {
+            color: #6b7280;
+            max-width: 650px;
+            margin: auto;
+        }
+
+        /* ABOUT */
+
+        .about {
+            background: #ffffff;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 45px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: #4b5563;
+            margin-bottom: 15px;
+        }
+
+        .founder-card {
+            background: #f8fafc;
+            border: 1px solid #e5e7eb;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+        }
+
+        .founder-card h3 {
+            color: #4f46e5;
+            font-size: 27px;
+            margin-bottom: 8px;
+        }
+
+        .founder-card .role {
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .founder-card p {
+            color: #4b5563;
+            margin-bottom: 8px;
+        }
+
+        /* TECHNOLOGIES */
+
+        .technologies {
+            background: #f8fafc;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .tech-card {
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            border: 1px solid #e5e7eb;
+            transition: 0.25s;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+        }
+
+        .tech-icon {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .tech-card h3 {
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .tech-card p {
+            color: #6b7280;
+        }
+
+        /* CUSTOM TRAINING */
+
+        .custom {
+            background: #111827;
+            color: white;
+        }
+
+        .custom-content {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .custom h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .custom p {
+            color: #d1d5db;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .custom-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .custom-list span {
+            padding: 10px 17px;
+            border: 1px solid #4b5563;
+            border-radius: 30px;
+            color: #e5e7eb;
+        }
+
+        /* ONLINE */
+
+        .online {
+            background: white;
+        }
+
+        .online-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .online-card {
+            padding: 30px;
+            text-align: center;
+            border-radius: 18px;
+            background: #f8fafc;
+        }
+
+        .online-card h3 {
+            margin: 15px 0 8px;
+        }
+
+        .online-card p {
+            color: #6b7280;
+        }
+
+        /* WHY US */
+
+        .why {
+            background: #eef2ff;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+        }
+
+        .why-card {
+            background: white;
+            padding: 25px 15px;
+            text-align: center;
+            border-radius: 15px;
+        }
+
+        .why-card h3 {
+            font-size: 17px;
+            margin: 12px 0 8px;
+        }
+
+        .why-card p {
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            text-align: center;
+            background: #ffffff;
+        }
+
+        .contact-box {
+            max-width: 750px;
+            margin: auto;
+            padding: 50px 25px;
+            border-radius: 25px;
+            background: linear-gradient(135deg, #eef2ff, #f0fdf4);
+        }
+
+        .contact-box h2 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .contact-box p {
+            color: #4b5563;
+            margin-bottom: 25px;
+        }
+
+        .email {
+            display: inline-block;
+            margin-top: 20px;
+            color: #4f46e5;
+            font-size: 19px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #111827;
+            color: #d1d5db;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        footer strong {
+            color: white;
+        }
+
+        footer p {
+            margin: 6px 0;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 850px) {
+
+            nav {
+                display: none;
+            }
+
+            .hero {
+                min-height: auto;
+            }
+
+            .hero-content {
+                padding: 70px 22px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .about-grid,
+            .tech-grid,
+            .online-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            section {
+                padding: 65px 20px;
+            }
+
+            .section-title h2,
+            .custom h2,
+            .contact-box h2 {
+                font-size: 31px;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .navbar {
+                padding: 16px 18px;
+            }
+
+            .logo {
+                font-size: 21px;
+            }
+
+            .hero h1 {
+                font-size: 45px;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                text-align: center;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .founder-card {
+                padding: 25px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <header>
+        <div class="navbar">
+
+            <a href="#home" class="logo">
+                Data <span>With Sri</span>
+            </a>
+
+            <nav>
+                <a href="#about">About</a>
+                <a href="#technologies">Technologies</a>
+                <a href="#training">Training</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- HERO -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="badge">
+                Online Technology Training
+            </div>
+
+            <h1>
+                Learn Technology.<br>
+                <span>Build Your Future.</span>
+            </h1>
+
+            <p>
+                Data With Sri provides affordable and customizable
+                online training in programming, data, analytics and
+                artificial intelligence.
+            </p>
+
+            <div class="buttons">
+
+                <a href="#technologies" class="btn primary">
+                    Explore What We Teach
+                </a>
+
+                <a href="#contact" class="btn secondary">
+                    Contact Us
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section class="about" id="about">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>About Data With Sri</h2>
+
+                <p>
+                    Practical and customizable technology training
+                    designed around your learning goals.
+                </p>
+
+            </div>
+
+            <div class="about-grid">
+
+                <div class="about-text">
+
+                    <h3>Technology learning, your way.</h3>
+
+                    <p>
+                        Data With Sri is an online technology training
+                        initiative focused on helping learners develop
+                        strong technical foundations and practical skills.
+                    </p>
+
+                    <p>
+                        We believe that learning should be customizable.
+                        Tell us what you want to learn, and we can
+                        customize the training according to your goals,
+                        current skill level and requirements.
+                    </p>
+
+                    <p>
+                        Our sessions can support students, graduates,
+                        placement aspirants and anyone who wants to
+                        strengthen their technology skills.
+                    </p>
+
+                </div>
+
+
+                <div class="founder-card">
+
+                    <h3>Ilakkiya</h3>
+
+                    <div class="role">
+                        Founder — Data With Sri
+                    </div>
+
+                    <p>
+                        🎓 5-Year Integrated M.Sc. in
+                        Artificial Intelligence & Machine Learning
+                    </p>
+
+                    <p>
+                        🏫 Coimbatore Institute of Technology
+                    </p>
+
+                    <p>
+                        💻 Currently working as an AI Engineer
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TECHNOLOGIES -->
+
+    <section class="technologies" id="technologies">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>What We Teach</h2>
+
+                <p>
+                    Build strong technical skills through structured,
+                    practical and customizable online sessions.
+                </p>
+
+            </div>
+
+
+            <div class="tech-grid">
+
+                <div class="tech-card">
+
+                    <div class="tech-icon">🧩</div>
+
+                    <h3>Data Structures</h3>
+
+                    <p>
+                        Understand important data structures and learn
+                        how they are used to solve programming problems.
+                    </p>
+
+                </div>
+
+
+                <div class="tech-card">
+
+                    <div class="tech-icon">💡</div>
+
+                    <h3>Problem Solving</h3>
+
+                    <p>
+                        Develop logical thinking, algorithmic thinking
+                        and practical coding problem-solving skills.
+                    </p>
+
+                </div>
+
+
+                <div class="tech-card">
+
+                    <div class="tech-icon">🗄️</div>
+
+                    <h3>SQL</h3>
+
+                    <p>
+                        Learn SQL from fundamentals to advanced concepts
+                        using practical examples and exercises.
+                    </p>
+
+                </div>
+
+
+                <div class="tech-card">
+
+                    <div class="tech-icon">📊</div>
+
+                    <h3>Data Analytics</h3>
+
+                    <p>
+                        Learn data analysis, data manipulation,
+                        visualization and analytical thinking.
+                    </p>
+
+                </div>
+
+
+                <div class="tech-card">
+
+                    <div class="tech-icon">🔬</div>
+
+                    <h3>Data Science</h3>
+
+                    <p>
+                        Explore data preparation, analysis,
+                        machine learning concepts and applications.
+                    </p>
+
+                </div>
+
+
+                <div class="tech-card">
+
+                    <div class="tech-icon">🤖</div>
+
+                    <h3>Artificial Intelligence</h3>
+
+                    <p>
+                        Build a strong foundation in AI concepts
+                        and explore practical AI applications.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CUSTOM TRAINING -->
+
+    <section class="custom" id="training">
+
+        <div class="container">
+
+            <div class="custom-content">
+
+                <h2>Don't See Exactly What You Need?</h2>
+
+                <p>
+                    No problem! Tell us what you want to learn.
+                    We can customize the training according to
+                    your requirements.
+                </p>
+
+                <div class="custom-list">
+
+                    <span>Individual Topics</span>
+                    <span>Complete Courses</span>
+                    <span>Placement Preparation</span>
+                    <span>Interview Preparation</span>
+                    <span>College Training</span>
+                    <span>Customized Sessions</span>
+
+                </div>
+
+                <a href="#contact" class="btn primary">
+                    Discuss Your Requirement
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ONLINE SESSIONS -->
+
+    <section class="online">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Online Sessions</h2>
+
+                <p>
+                    Learn from anywhere with flexible online
+                    technology training.
+                </p>
+
+            </div>
+
+
+            <div class="online-grid">
+
+                <div class="online-card">
+
+                    <div class="tech-icon">👤</div>
+
+                    <h3>Individual Sessions</h3>
+
+                    <p>
+                        Personalized learning based on your
+                        requirements and current skill level.
+                    </p>
+
+                </div>
+
+
+                <div class="online-card">
+
+                    <div class="tech-icon">👥</div>
+
+                    <h3>Group Training</h3>
+
+                    <p>
+                        Learn together through structured
+                        online sessions and practical exercises.
+                    </p>
+
+                </div>
+
+
+                <div class="online-card">
+
+                    <div class="tech-icon">🎓</div>
+
+                    <h3>College Training</h3>
+
+                    <p>
+                        Customized technology and placement
+                        training programs for students.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- WHY DATA WITH SRI -->
+
+    <section class="why">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Why Data With Sri?</h2>
+
+            </div>
+
+
+            <div class="why-grid">
+
+                <div class="why-card">
+
+                    <div class="tech-icon">🎯</div>
+
+                    <h3>Customized</h3>
+
+                    <p>
+                        Learn according to your goals.
+                    </p>
+
+                </div>
+
+
+                <div class="why-card">
+
+                    <div class="tech-icon">💻</div>
+
+                    <h3>Practical</h3>
+
+                    <p>
+                        Focus on concepts and practice.
+                    </p>
+
+                </div>
+
+
+                <div class="why-card">
+
+                    <div class="tech-icon">💰</div>
+
+                    <h3>Affordable</h3>
+
+                    <p>
+                        Accessible technology training.
+                    </p>
+
+                </div>
+
+
+                <div class="why-card">
+
+                    <div class="tech-icon">🌎</div>
+
+                    <h3>Online</h3>
+
+                    <p>
+                        Learn from anywhere.
+                    </p>
+
+                </div>
+
+
+                <div class="why-card">
+
+                    <div class="tech-icon">🚀</div>
+
+                    <h3>Career Focused</h3>
+
+                    <p>
+                        Build useful technical skills.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section class="contact" id="contact">
+
+        <div class="container">
+
+            <div class="contact-box">
+
+                <h2>Let's Start Learning</h2>
+
+                <p>
+                    Have a course requirement, training request,
+                    placement preparation requirement or a
+                    technology you want to learn?
+                </p>
+
+                <a
+                    href="mailto:datawithsri@gmail.com?subject=Training%20Inquiry%20-%20Data%20With%20Sri"
+                    class="btn primary"
+                >
+                    📧 Send Us an Inquiry
+                </a>
+
+                <br>
+
+                <a
+                    href="mailto:datawithsri@gmail.com"
+                    class="email"
+                >
+                    datawithsri@gmail.com
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 <strong>Data With Sri</strong>. All rights reserved.
+        </p>
+
+        <p>
+            Founded by Ilakkiya | Online Technology Training
+        </p>
+
+    </footer>
+
+
+</body>
+                  </html>
