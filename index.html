@@ -1,13 +1,14 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-        content="Data With Sri - Data Structures, SQL, Python, AI, Data Science and Placement Training">
+        content="Data With Sri - Learn Data Structures, SQL, Python, Artificial Intelligence, Data Science and Placement Skills.">
 
     <title>Data With Sri | Learn. Practice. Get Placed.</title>
 
@@ -31,7 +32,7 @@
 
         nav {
             width: 100%;
-            background: #ffffff;
+            background: white;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -39,7 +40,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
         }
 
         .logo-area {
@@ -58,7 +59,6 @@
         .brand {
             font-size: 22px;
             font-weight: bold;
-            color: #172033;
         }
 
         .brand span {
@@ -126,7 +126,6 @@
             text-decoration: none;
             font-weight: bold;
             transition: 0.3s;
-            cursor: pointer;
         }
 
         .primary-btn {
@@ -187,7 +186,7 @@
         /* ================= ABOUT ================= */
 
         .about {
-            background: #ffffff;
+            background: white;
         }
 
         .about-content {
@@ -214,16 +213,15 @@
         }
 
         .course-card {
-            background: #ffffff;
+            background: white;
             padding: 30px;
             border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
             transition: 0.3s;
         }
 
         .course-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
         }
 
         .course-card h3 {
@@ -250,7 +248,6 @@
             font-weight: bold;
             cursor: pointer;
             text-align: left;
-            transition: 0.3s;
         }
 
         .syllabus-btn:hover {
@@ -312,7 +309,7 @@
         }
 
         .webinar-detail {
-            background: rgba(255, 255, 255, 0.14);
+            background: rgba(255,255,255,0.14);
             padding: 18px 25px;
             border-radius: 12px;
             min-width: 200px;
@@ -342,7 +339,7 @@
 
         .register-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
         }
 
         .webinar-note {
@@ -351,10 +348,10 @@
             opacity: 0.9;
         }
 
-        /* ================= WHY US ================= */
+        /* ================= WHY ================= */
 
         .why {
-            background: #ffffff;
+            background: white;
         }
 
         .why-grid {
@@ -387,7 +384,7 @@
 
         .placement {
             background: linear-gradient(135deg, #5b21b6, #7c3aed);
-            color: #ffffff;
+            color: white;
             text-align: center;
         }
 
@@ -411,11 +408,11 @@
         .contact-box {
             max-width: 700px;
             margin: auto;
-            background: #ffffff;
+            background: white;
             padding: 40px;
             border-radius: 15px;
             text-align: center;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
         }
 
         .contact-box h2 {
@@ -435,7 +432,7 @@
 
         footer {
             background: #111827;
-            color: #ffffff;
+            color: white;
             text-align: center;
             padding: 25px;
         }
@@ -532,6 +529,7 @@
 
 
 <body>
+
 
     <!-- ================= NAVIGATION ================= -->
 
@@ -649,7 +647,6 @@
 
         </div>
 
-
         <div class="about-content">
 
             <p>
@@ -685,7 +682,7 @@
         <div class="course-grid">
 
 
-            <!-- ================= DSA ================= -->
+            <!-- DSA -->
 
             <div class="course-card">
 
@@ -698,13 +695,20 @@
                     fundamentals for technical interviews.
                 </p>
 
-                <button class="syllabus-btn" onclick="toggleSyllabus('dsa')">
+                <button
+                    class="syllabus-btn"
+                    onclick="toggleSyllabus('dsa')"
+                >
                     View Syllabus ▼
                 </button>
 
-                <div class="syllabus-content" id="dsa">
+                <div
+                    class="syllabus-content"
+                    id="dsa"
+                >
 
                     <ul>
+
                         <li>Programming Fundamentals</li>
                         <li>Time & Space Complexity</li>
                         <li>Arrays</li>
@@ -724,6 +728,7 @@
                         <li>Dynamic Programming</li>
                         <li>Problem Solving</li>
                         <li>Interview Coding Problems</li>
+
                     </ul>
 
                 </div>
@@ -731,7 +736,7 @@
             </div>
 
 
-            <!-- ================= SQL ================= -->
+            <!-- SQL -->
 
             <div class="course-card">
 
@@ -744,13 +749,20 @@
                     confidently for real-world and interview use.
                 </p>
 
-                <button class="syllabus-btn" onclick="toggleSyllabus('sql')">
+                <button
+                    class="syllabus-btn"
+                    onclick="toggleSyllabus('sql')"
+                >
                     View Syllabus ▼
                 </button>
 
-                <div class="syllabus-content" id="sql">
+                <div
+                    class="syllabus-content"
+                    id="sql"
+                >
 
                     <ul>
+
                         <li>Database Fundamentals</li>
                         <li>Tables and Records</li>
                         <li>SELECT Statements</li>
@@ -772,6 +784,7 @@
                         <li>CTEs</li>
                         <li>Window Functions</li>
                         <li>SQL Interview Problems</li>
+
                     </ul>
 
                 </div>
@@ -779,7 +792,7 @@
             </div>
 
 
-            <!-- ================= PYTHON ================= -->
+            <!-- PYTHON -->
 
             <div class="course-card">
 
@@ -792,13 +805,20 @@
                     to practical problem solving.
                 </p>
 
-                <button class="syllabus-btn" onclick="toggleSyllabus('python')">
+                <button
+                    class="syllabus-btn"
+                    onclick="toggleSyllabus('python')"
+                >
                     View Syllabus ▼
                 </button>
 
-                <div class="syllabus-content" id="python">
+                <div
+                    class="syllabus-content"
+                    id="python"
+                >
 
                     <ul>
+
                         <li>Python Fundamentals</li>
                         <li>Variables and Data Types</li>
                         <li>Operators</li>
@@ -819,6 +839,7 @@
                         <li>Matplotlib</li>
                         <li>Problem Solving</li>
                         <li>Python Projects</li>
+
                     </ul>
 
                 </div>
@@ -826,7 +847,7 @@
             </div>
 
 
-            <!-- ================= AI ================= -->
+            <!-- AI -->
 
             <div class="course-card">
 
@@ -839,13 +860,20 @@
                     practical applications and projects.
                 </p>
 
-                <button class="syllabus-btn" onclick="toggleSyllabus('ai')">
+                <button
+                    class="syllabus-btn"
+                    onclick="toggleSyllabus('ai')"
+                >
                     View Syllabus ▼
                 </button>
 
-                <div class="syllabus-content" id="ai">
+                <div
+                    class="syllabus-content"
+                    id="ai"
+                >
 
                     <ul>
+
                         <li>Introduction to Artificial Intelligence</li>
                         <li>AI Fundamentals</li>
                         <li>Machine Learning Fundamentals</li>
@@ -864,6 +892,7 @@
                         <li>Large Language Model Fundamentals</li>
                         <li>AI Applications</li>
                         <li>Practical AI Projects</li>
+
                     </ul>
 
                 </div>
@@ -871,7 +900,7 @@
             </div>
 
 
-            <!-- ================= DATA SCIENCE ================= -->
+            <!-- DATA SCIENCE -->
 
             <div class="course-card">
 
@@ -884,13 +913,20 @@
                     statistics and machine learning workflows.
                 </p>
 
-                <button class="syllabus-btn" onclick="toggleSyllabus('datascience')">
+                <button
+                    class="syllabus-btn"
+                    onclick="toggleSyllabus('datascience')"
+                >
                     View Syllabus ▼
                 </button>
 
-                <div class="syllabus-content" id="datascience">
+                <div
+                    class="syllabus-content"
+                    id="datascience"
+                >
 
                     <ul>
+
                         <li>Introduction to Data Science</li>
                         <li>Python for Data Science</li>
                         <li>NumPy</li>
@@ -909,6 +945,7 @@
                         <li>Model Evaluation</li>
                         <li>Real-World Data Analysis</li>
                         <li>Data Science Projects</li>
+
                     </ul>
 
                 </div>
@@ -916,7 +953,7 @@
             </div>
 
 
-            <!-- ================= PLACEMENT ================= -->
+            <!-- PLACEMENT -->
 
             <div class="course-card">
 
@@ -929,13 +966,20 @@
                     interviews and placement requirements.
                 </p>
 
-                <button class="syllabus-btn" onclick="toggleSyllabus('placement-training')">
+                <button
+                    class="syllabus-btn"
+                    onclick="toggleSyllabus('placement')"
+                >
                     View Syllabus ▼
                 </button>
 
-                <div class="syllabus-content" id="placement-training">
+                <div
+                    class="syllabus-content"
+                    id="placement"
+                >
 
                     <ul>
+
                         <li>Aptitude</li>
                         <li>Quantitative Ability</li>
                         <li>Logical Reasoning</li>
@@ -951,6 +995,7 @@
                         <li>HR Interview Preparation</li>
                         <li>Mock Interviews</li>
                         <li>Placement-Oriented Projects</li>
+
                     </ul>
 
                 </div>
@@ -965,7 +1010,10 @@
 
     <!-- ================= WEBINAR ================= -->
 
-    <section class="webinar" id="webinar">
+    <section
+        class="webinar"
+        id="webinar"
+    >
 
         <div class="webinar-box">
 
@@ -974,44 +1022,61 @@
             </h2>
 
             <p>
-                Learn, ask questions, understand our training
-                programs and start building your technical skills.
+                Learn about our training programs,
+                ask questions and start building your
+                technical skills.
             </p>
 
 
             <div class="webinar-details">
 
+
                 <div class="webinar-detail">
 
-                    <strong>📅 Every Sunday</strong>
+                    <strong>
+                        📅 Every Sunday
+                    </strong>
 
-                    <span>Weekly Session</span>
+                    <span>
+                        Weekly Session
+                    </span>
 
                 </div>
 
 
                 <div class="webinar-detail">
 
-                    <strong>🕚 11:00 AM – 1:00 PM</strong>
+                    <strong>
+                        🕚 11:00 AM – 1:00 PM
+                    </strong>
 
-                    <span>2 Hour Session</span>
+                    <span>
+                        2 Hour Session
+                    </span>
 
                 </div>
 
 
                 <div class="webinar-detail">
 
-                    <strong>💻 Online</strong>
+                    <strong>
+                        💻 Online
+                    </strong>
 
-                    <span>Google Meet</span>
+                    <span>
+                        Google Meet
+                    </span>
 
                 </div>
+
 
             </div>
 
 
+            <!-- NEW GOOGLE FORM LINK -->
+
             <a
-                href="https://forms.gle/j6ZjerVSKkX35G4y7"
+                href="https://forms.gle/TaXv7BpG8argoTor8"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="register-btn"
@@ -1021,16 +1086,19 @@
 
 
             <p class="webinar-note">
-                Register through the form and receive the webinar
-                joining details by email.
+
+                Register through the form and receive
+                the webinar joining details by email.
+
             </p>
+
 
         </div>
 
     </section>
 
 
-    <!-- ================= WHY DATA WITH SRI ================= -->
+    <!-- ================= WHY US ================= -->
 
     <section class="why">
 
@@ -1111,7 +1179,10 @@
 
     <!-- ================= PLACEMENT ================= -->
 
-    <section class="placement" id="placement">
+    <section
+        class="placement"
+        id="placement"
+    >
 
         <h2>
             Ready for Your Next Opportunity?
@@ -1128,7 +1199,10 @@
 
     <!-- ================= CONTACT ================= -->
 
-    <section class="contact" id="contact">
+    <section
+        class="contact"
+        id="contact"
+    >
 
         <div class="section-title">
 
@@ -1199,7 +1273,8 @@
 
         function toggleSyllabus(id) {
 
-            const syllabus = document.getElementById(id);
+            const syllabus =
+                document.getElementById(id);
 
             syllabus.classList.toggle("active");
 
@@ -1211,4 +1286,3 @@
 </body>
 
 </html>
-```
