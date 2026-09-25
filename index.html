@@ -1,9 +1,9 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
@@ -126,6 +126,7 @@
             text-decoration: none;
             font-weight: bold;
             transition: 0.3s;
+            cursor: pointer;
         }
 
         .primary-btn {
@@ -221,7 +222,7 @@
         }
 
         .course-card:hover {
-            transform: translateY(-7px);
+            transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
         }
 
@@ -231,8 +232,123 @@
             font-size: 22px;
         }
 
-        .course-card p {
+        .course-card > p {
             color: #64748b;
+            margin-bottom: 18px;
+        }
+
+        /* ================= SYLLABUS ================= */
+
+        .syllabus-btn {
+            width: 100%;
+            border: none;
+            background: #f1ecff;
+            color: #5b21b6;
+            padding: 12px 15px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: left;
+            transition: 0.3s;
+        }
+
+        .syllabus-btn:hover {
+            background: #e5dcff;
+        }
+
+        .syllabus-content {
+            display: none;
+            margin-top: 15px;
+            padding: 18px;
+            background: #faf9ff;
+            border-left: 4px solid #5b21b6;
+            border-radius: 8px;
+        }
+
+        .syllabus-content.active {
+            display: block;
+        }
+
+        .syllabus-content ul {
+            padding-left: 20px;
+        }
+
+        .syllabus-content li {
+            margin-bottom: 7px;
+            color: #475569;
+        }
+
+        /* ================= WEBINAR ================= */
+
+        .webinar {
+            background: linear-gradient(135deg, #5b21b6, #7c3aed);
+            color: white;
+            text-align: center;
+        }
+
+        .webinar-box {
+            max-width: 900px;
+            margin: auto;
+            padding: 45px 30px;
+        }
+
+        .webinar-box h2 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .webinar-box > p {
+            font-size: 19px;
+            margin-bottom: 25px;
+        }
+
+        .webinar-details {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 25px 0 30px;
+        }
+
+        .webinar-detail {
+            background: rgba(255, 255, 255, 0.14);
+            padding: 18px 25px;
+            border-radius: 12px;
+            min-width: 200px;
+        }
+
+        .webinar-detail strong {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+
+        .webinar-detail span {
+            font-size: 15px;
+        }
+
+        .register-btn {
+            display: inline-block;
+            background: white;
+            color: #5b21b6;
+            padding: 15px 30px;
+            border-radius: 9px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 17px;
+            transition: 0.3s;
+        }
+
+        .register-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .webinar-note {
+            margin-top: 20px;
+            font-size: 14px;
+            opacity: 0.9;
         }
 
         /* ================= WHY US ================= */
@@ -375,6 +491,10 @@
             .section-title h2 {
                 font-size: 30px;
             }
+
+            .webinar-box h2 {
+                font-size: 32px;
+            }
         }
 
         @media (max-width: 500px) {
@@ -400,6 +520,10 @@
             .contact-box {
                 padding: 25px;
             }
+
+            .webinar-detail {
+                width: 100%;
+            }
         }
 
     </style>
@@ -408,7 +532,6 @@
 
 
 <body>
-
 
     <!-- ================= NAVIGATION ================= -->
 
@@ -427,7 +550,6 @@
 
         </div>
 
-
         <ul>
 
             <li>
@@ -443,6 +565,10 @@
             </li>
 
             <li>
+                <a href="#webinar">Webinar</a>
+            </li>
+
+            <li>
                 <a href="#placement">Placement</a>
             </li>
 
@@ -453,7 +579,6 @@
         </ul>
 
     </nav>
-
 
 
     <!-- ================= HERO ================= -->
@@ -468,14 +593,12 @@
                 Get Placed.
             </h1>
 
-
             <p>
                 Build strong technical skills with practical
                 training in Data Structures, SQL, Python,
                 Artificial Intelligence, Data Science and
                 placement-oriented problem solving.
             </p>
-
 
             <div class="buttons">
 
@@ -486,12 +609,11 @@
                     Explore Courses
                 </a>
 
-
                 <a
-                    href="#contact"
+                    href="#webinar"
                     class="btn secondary-btn"
                 >
-                    Contact Us
+                    Join Webinar
                 </a>
 
             </div>
@@ -509,7 +631,6 @@
         </div>
 
     </section>
-
 
 
     <!-- ================= ABOUT ================= -->
@@ -544,7 +665,6 @@
     </section>
 
 
-
     <!-- ================= COURSES ================= -->
 
     <section class="courses" id="courses">
@@ -552,7 +672,7 @@
         <div class="section-title">
 
             <h2>
-                What We Teach
+                Technologies We Teach
             </h2>
 
             <p>
@@ -565,54 +685,153 @@
         <div class="course-grid">
 
 
+            <!-- ================= DSA ================= -->
+
             <div class="course-card">
 
                 <h3>
-                    Data Structures
+                    🧠 Data Structures & Algorithms
                 </h3>
 
                 <p>
-                    Learn arrays, strings, linked lists,
-                    stacks, queues, trees, searching,
-                    sorting and problem-solving techniques.
+                    Build strong problem-solving and coding
+                    fundamentals for technical interviews.
                 </p>
+
+                <button class="syllabus-btn" onclick="toggleSyllabus('dsa')">
+                    View Syllabus ▼
+                </button>
+
+                <div class="syllabus-content" id="dsa">
+
+                    <ul>
+                        <li>Programming Fundamentals</li>
+                        <li>Time & Space Complexity</li>
+                        <li>Arrays</li>
+                        <li>Strings</li>
+                        <li>Linked Lists</li>
+                        <li>Stacks</li>
+                        <li>Queues</li>
+                        <li>Hashing</li>
+                        <li>Recursion</li>
+                        <li>Trees</li>
+                        <li>Binary Search Trees</li>
+                        <li>Heaps</li>
+                        <li>Graphs</li>
+                        <li>Searching Algorithms</li>
+                        <li>Sorting Algorithms</li>
+                        <li>Greedy Algorithms</li>
+                        <li>Dynamic Programming</li>
+                        <li>Problem Solving</li>
+                        <li>Interview Coding Problems</li>
+                    </ul>
+
+                </div>
 
             </div>
 
 
+            <!-- ================= SQL ================= -->
+
             <div class="course-card">
 
                 <h3>
-                    SQL
+                    🗄️ SQL
                 </h3>
 
                 <p>
-                    Learn databases, SQL queries, filtering,
-                    joins, grouping, subqueries and
-                    interview-oriented SQL problems.
+                    Learn databases and write SQL queries
+                    confidently for real-world and interview use.
                 </p>
+
+                <button class="syllabus-btn" onclick="toggleSyllabus('sql')">
+                    View Syllabus ▼
+                </button>
+
+                <div class="syllabus-content" id="sql">
+
+                    <ul>
+                        <li>Database Fundamentals</li>
+                        <li>Tables and Records</li>
+                        <li>SELECT Statements</li>
+                        <li>WHERE Clause</li>
+                        <li>ORDER BY</li>
+                        <li>GROUP BY</li>
+                        <li>HAVING</li>
+                        <li>Aggregate Functions</li>
+                        <li>Primary Keys</li>
+                        <li>Foreign Keys</li>
+                        <li>Constraints</li>
+                        <li>INNER JOIN</li>
+                        <li>LEFT JOIN</li>
+                        <li>RIGHT JOIN</li>
+                        <li>FULL JOIN Concepts</li>
+                        <li>Subqueries</li>
+                        <li>Views</li>
+                        <li>Indexes</li>
+                        <li>CTEs</li>
+                        <li>Window Functions</li>
+                        <li>SQL Interview Problems</li>
+                    </ul>
+
+                </div>
 
             </div>
 
 
+            <!-- ================= PYTHON ================= -->
+
             <div class="course-card">
 
                 <h3>
-                    Python
+                    🐍 Python
                 </h3>
 
                 <p>
-                    Build strong programming fundamentals
-                    and solve real-world problems using Python.
+                    Learn Python programming from fundamentals
+                    to practical problem solving.
                 </p>
+
+                <button class="syllabus-btn" onclick="toggleSyllabus('python')">
+                    View Syllabus ▼
+                </button>
+
+                <div class="syllabus-content" id="python">
+
+                    <ul>
+                        <li>Python Fundamentals</li>
+                        <li>Variables and Data Types</li>
+                        <li>Operators</li>
+                        <li>Conditional Statements</li>
+                        <li>Loops</li>
+                        <li>Functions</li>
+                        <li>Lists</li>
+                        <li>Tuples</li>
+                        <li>Sets</li>
+                        <li>Dictionaries</li>
+                        <li>Strings</li>
+                        <li>Exception Handling</li>
+                        <li>File Handling</li>
+                        <li>Object-Oriented Programming</li>
+                        <li>Modules and Packages</li>
+                        <li>NumPy</li>
+                        <li>Pandas</li>
+                        <li>Matplotlib</li>
+                        <li>Problem Solving</li>
+                        <li>Python Projects</li>
+                    </ul>
+
+                </div>
 
             </div>
 
 
+            <!-- ================= AI ================= -->
+
             <div class="course-card">
 
                 <h3>
-                    Artificial Intelligence
+                    🤖 Artificial Intelligence
                 </h3>
 
                 <p>
@@ -620,35 +839,121 @@
                     practical applications and projects.
                 </p>
 
+                <button class="syllabus-btn" onclick="toggleSyllabus('ai')">
+                    View Syllabus ▼
+                </button>
+
+                <div class="syllabus-content" id="ai">
+
+                    <ul>
+                        <li>Introduction to Artificial Intelligence</li>
+                        <li>AI Fundamentals</li>
+                        <li>Machine Learning Fundamentals</li>
+                        <li>Supervised Learning</li>
+                        <li>Unsupervised Learning</li>
+                        <li>Regression</li>
+                        <li>Classification</li>
+                        <li>Clustering</li>
+                        <li>Feature Engineering</li>
+                        <li>Model Evaluation</li>
+                        <li>Neural Networks</li>
+                        <li>Deep Learning</li>
+                        <li>Natural Language Processing</li>
+                        <li>Computer Vision</li>
+                        <li>Generative AI</li>
+                        <li>Large Language Model Fundamentals</li>
+                        <li>AI Applications</li>
+                        <li>Practical AI Projects</li>
+                    </ul>
+
+                </div>
+
             </div>
 
+
+            <!-- ================= DATA SCIENCE ================= -->
 
             <div class="course-card">
 
                 <h3>
-                    Data Science
+                    📊 Data Science
                 </h3>
 
                 <p>
-                    Learn data analysis, machine learning,
-                    visualization and practical data science
-                    workflows.
+                    Learn data analysis, visualization,
+                    statistics and machine learning workflows.
                 </p>
+
+                <button class="syllabus-btn" onclick="toggleSyllabus('datascience')">
+                    View Syllabus ▼
+                </button>
+
+                <div class="syllabus-content" id="datascience">
+
+                    <ul>
+                        <li>Introduction to Data Science</li>
+                        <li>Python for Data Science</li>
+                        <li>NumPy</li>
+                        <li>Pandas</li>
+                        <li>Data Cleaning</li>
+                        <li>Data Preprocessing</li>
+                        <li>Exploratory Data Analysis</li>
+                        <li>Data Visualization</li>
+                        <li>Statistics</li>
+                        <li>Probability</li>
+                        <li>Feature Engineering</li>
+                        <li>Machine Learning Fundamentals</li>
+                        <li>Regression</li>
+                        <li>Classification</li>
+                        <li>Clustering</li>
+                        <li>Model Evaluation</li>
+                        <li>Real-World Data Analysis</li>
+                        <li>Data Science Projects</li>
+                    </ul>
+
+                </div>
 
             </div>
 
 
+            <!-- ================= PLACEMENT ================= -->
+
             <div class="course-card">
 
                 <h3>
-                    Placement Training
+                    🎯 Placement Training
                 </h3>
 
                 <p>
-                    Prepare for technical interviews,
-                    coding rounds, aptitude, problem solving
-                    and placement requirements.
+                    Prepare for coding rounds, technical
+                    interviews and placement requirements.
                 </p>
+
+                <button class="syllabus-btn" onclick="toggleSyllabus('placement-training')">
+                    View Syllabus ▼
+                </button>
+
+                <div class="syllabus-content" id="placement-training">
+
+                    <ul>
+                        <li>Aptitude</li>
+                        <li>Quantitative Ability</li>
+                        <li>Logical Reasoning</li>
+                        <li>Verbal Ability</li>
+                        <li>Programming Fundamentals</li>
+                        <li>Data Structures</li>
+                        <li>Problem Solving</li>
+                        <li>SQL</li>
+                        <li>Python</li>
+                        <li>Coding Challenges</li>
+                        <li>Technical Interview Preparation</li>
+                        <li>Resume Preparation</li>
+                        <li>HR Interview Preparation</li>
+                        <li>Mock Interviews</li>
+                        <li>Placement-Oriented Projects</li>
+                    </ul>
+
+                </div>
 
             </div>
 
@@ -657,6 +962,72 @@
 
     </section>
 
+
+    <!-- ================= WEBINAR ================= -->
+
+    <section class="webinar" id="webinar">
+
+        <div class="webinar-box">
+
+            <h2>
+                🎓 Join Our Weekly Webinar
+            </h2>
+
+            <p>
+                Learn, ask questions, understand our training
+                programs and start building your technical skills.
+            </p>
+
+
+            <div class="webinar-details">
+
+                <div class="webinar-detail">
+
+                    <strong>📅 Every Sunday</strong>
+
+                    <span>Weekly Session</span>
+
+                </div>
+
+
+                <div class="webinar-detail">
+
+                    <strong>🕚 11:00 AM – 1:00 PM</strong>
+
+                    <span>2 Hour Session</span>
+
+                </div>
+
+
+                <div class="webinar-detail">
+
+                    <strong>💻 Online</strong>
+
+                    <span>Google Meet</span>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="https://forms.gle/j6ZjerVSKkX35G4y7"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="register-btn"
+            >
+                📝 Register for Webinar
+            </a>
+
+
+            <p class="webinar-note">
+                Register through the form and receive the webinar
+                joining details by email.
+            </p>
+
+        </div>
+
+    </section>
 
 
     <!-- ================= WHY DATA WITH SRI ================= -->
@@ -738,7 +1109,6 @@
     </section>
 
 
-
     <!-- ================= PLACEMENT ================= -->
 
     <section class="placement" id="placement">
@@ -754,7 +1124,6 @@
         </p>
 
     </section>
-
 
 
     <!-- ================= CONTACT ================= -->
@@ -779,7 +1148,6 @@
             <h2>
                 Data With Sri
             </h2>
-
 
             <p>
                 For course details, training programs
@@ -810,7 +1178,6 @@
     </section>
 
 
-
     <!-- ================= FOOTER ================= -->
 
     <footer>
@@ -826,6 +1193,22 @@
     </footer>
 
 
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        function toggleSyllabus(id) {
+
+            const syllabus = document.getElementById(id);
+
+            syllabus.classList.toggle("active");
+
+        }
+
+    </script>
+
+
 </body>
 
 </html>
+```
